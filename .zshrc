@@ -209,3 +209,6 @@ build_prompt() {
 }
 
 PROMPT='%{%f%b%k%}$(build_prompt) '
+
+## GOPATH
+export GOPATH=$HOME/go
