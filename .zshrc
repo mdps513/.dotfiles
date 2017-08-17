@@ -214,6 +214,6 @@ PROMPT='%{%f%b%k%}$(build_prompt) '
 export GOPATH=$HOME/go
 
 #syntax-highlighting
-if [ -f .zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-  source .zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -f $HOME/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source $HOME/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
