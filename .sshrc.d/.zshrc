@@ -210,9 +210,6 @@ build_prompt() {
 
 PROMPT='%{%f%b%k%}$(build_prompt) '
 
-## PostgreSQL
-export PGDATA=/usr/local/var/postgres
-
 ## GOPATH
 export GOPATH=$HOME/go
 

@@ -1,0 +1,19 @@
+compdef sshrc=ssh
+
+tmux() {
+  local TMUXDIR=/tmp/.yatsu-tmux
+  if ! [ -d $TMUXDIR ]; then
+    rm -rf $TMUXDIR
+    mkdir -p $TMUXDIR
+  fi
+  rm -rf $TMUXDIR/.sshrc.d
+  cp -r $SSHHOME/.sshrc $SSHHOME/zshsshrc $SSHHOME/sshrc $SSHHOME/.sshrc.d $TMUXDIR
+  SSHHOME=$TMUXDIR SHELL=$TMUXDIR/zshsshrc `which tmux` -f $SSHHOME/.sshrc.d/.tmux.conf -S $TMUXDIR/tmuxserver $@
+}
+
+export ZSHINIT="let \$MYZSHRC='$SSHHOME/.sshrc.d/.zshrc' | source \$MYZSHRC"
+export SHELL=`which zsh`
+
+# alias etc... as you like
+alias ll='ls -l'
+alias la='ls -a'
