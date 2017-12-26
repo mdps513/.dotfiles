@@ -220,3 +220,9 @@ export GOPATH=$HOME/go
 if [ -f $HOME/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source $HOME/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/yatsu/.nodebrew/node/v8.8.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/yatsu/.nodebrew/node/v8.8.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/yatsu/.nodebrew/node/v8.8.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/yatsu/.nodebrew/node/v8.8.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
