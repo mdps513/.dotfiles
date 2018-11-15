@@ -1,4 +1,4 @@
-# If you come from bash you might have to change your $PATH.
+ # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -214,7 +214,10 @@ PROMPT='%{%f%b%k%}$(build_prompt) '
 export PGDATA=/usr/local/var/postgres
 
 ## GOPATH
+export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/opt/go/bin
+export PATH=$PATH:$GOPATH/bin
 
 #syntax-highlighting
 if [ -f $HOME/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
@@ -225,4 +228,13 @@ fi
 [[ -f /Users/yatsu/.nodebrew/node/v8.8.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/yatsu/.nodebrew/node/v8.8.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/yatsu/.nodebrew/node/v8.8.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/yatsu/.nodebrew/node/v8.8.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+#[[ -f /Users/yatsu/.nodebrew/node/v8.8.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/yatsu/.nodebrew/node/v8.8.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zshexport
+eval "$(rbenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+eval "$(pyenv init -)"
+source /usr/local/bin/aws_zsh_completer.sh
+
+# export ANDOROID_HOME
+export ANDOROID_HOME=/Users/yatsu/Library/Android/sdk
