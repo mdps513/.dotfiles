@@ -1,6 +1,6 @@
 [user]
-	name = 
-	email = 
+	name = mdps513
+	email = s1210103@gmail.com
 [core]
 	excludesfile = /Users/yatsu/.gitignore_global
 [difftool "sourcetree"]
@@ -12,5 +12,4 @@
 [alias]
 	graph = log --graph --decorate --oneline
 	tree = log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
-[commit]
-	template = /Users/yatsu/.stCommitMsg
+
